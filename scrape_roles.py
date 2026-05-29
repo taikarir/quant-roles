@@ -63,8 +63,26 @@ def scrape_page_text(url: str) -> str:
     # print(f"Scraping {url}...")
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    "--disable-blink-features=AutomationControlled",  # Removes the "webdriver" flag
+                    "--no-sandbox",
+                    "--disable-infobars",
+                    "--window-size=1920,1080"
+                ]
+            )
+            context = browser.new_context(
+                user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+                viewport={"width": 1920, "height": 1080},
+                device_scale_factor=1,
+                is_mobile=False,
+                has_touch=False,
+                locale="en-US",
+                timezone_id="America/New_York"
+            )
+            page = context.new_page()
+            page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             page.goto(url, wait_until="networkidle", timeout=30000)
             html_content = page.content()
             browser.close()
@@ -78,7 +96,7 @@ def scrape_page_text(url: str) -> str:
         print(f"Error scraping {url}: {e}")
         return ""
 
-def analyze_with_gemini(company_name: str, page_text: str) -> CompanyRolesReport:
+def analyze_with_gemini(company_name: str, company_url: str, page_text: str) -> CompanyRolesReport:
     """Uses Gemini API to extract quant roles matching the precise schema."""
     system_instruction = f"""
     You are a data extraction assistant. Analyze the text scraped from the careers page of {company_name}.
@@ -140,14 +158,33 @@ def agent(messages: list[BaseMessage]):
 def main():
     companies = load_company_urls("openroles.txt")
     print(f"Found {len(companies)} companies: {''.join([i['name'] for i in companies])}")
+    final_results = []
+    intern_results = []
     for _,company in enumerate(companies):
         print(f"[{_+1}/{len(companies)}] Processing {company['name']}...")
         raw_text = scrape_page_text(company["url"])
         try:
-            response = analyze_with_gemini(company["name"], raw_text)
+            response = analyze_with_gemini(company["name"], company["url"], raw_text)
+            final_results.append(response)
+            if response.has_quant_internships==True:
+                intern_results.append(response)
             print(response)
         except Exception as e:
             print(f" -> Failed parsing with Gemini: {e}")
+    with open("results.txt", "w") as f:
+        for i in final_results:
+            f.write(f"{i.company_name}: {str(i.has_quant_internships)}")
+            f.write("\n")
+    with open("intern_results.txt", "w") as f:
+        for i in intern_results:
+            f.write(f"{i.company_name}\n")
+            if i.has_quant_internships:
+                for j in i.matching_roles:
+                    f.write(f"\t{j.title}\n")
+                    f.write(f"\t\t{j.requirements}")
+                    f.write("\n")
+            f.write("\n")
+
 
 # for chunk in agent.stream(messages, stream_mode="updates"):
     # print(chunk)
