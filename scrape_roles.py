@@ -1,5 +1,5 @@
 import os
-import sqlite3
+import pickle
 import json
 from datetime import datetime
 from langgraph.func import entrypoint, task
@@ -32,11 +32,16 @@ class QuantInternRole(BaseModel):
     title: str = Field(description="The exact title of the open internship position.")
     url: str = Field(description="The direct application URL link if available, otherwise the main page URL.")
     requirements: str = Field(description="Brief summary of key tech stack or degree requirements.")
+    def __getitem__(self, item):
+        return getattr(self, item)
 
 class CompanyRolesReport(BaseModel):
     company_name: str
+    company_url: str
     has_quant_internships: bool
     matching_roles: List[QuantInternRole]
+    def __getitem__(self, item):
+        return getattr(self, item)
 
 def load_company_urls(filepath: str) -> List[dict]:
     """Reads a .txt file formatted with: Company Name, job posting page URL, and a blank newline."""
@@ -83,7 +88,7 @@ def scrape_page_text(url: str) -> str:
             )
             page = context.new_page()
             page.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.goto(url, wait_until="networkidle", timeout=15000)
             html_content = page.content()
             browser.close()
             
@@ -110,7 +115,42 @@ def analyze_with_gemini(company_name: str, company_url: str, page_text: str) -> 
         SystemMessage(content=system_instruction),
         HumanMessage(content=page_text)
     ])
-    return structured_response
+    updated_response = structured_response.model_copy(
+        update={"company_url": company_url}
+    )
+    return updated_response
+
+def compare_results(old_data: List[dict], new_data: List[dict]):
+    """Compares new scraping results against pickled data to identify new jobs."""
+    print("\n=== DELTA ANALYSIS (NEW ROLES DETECTED) ===")
+    
+    # Map old data into a dictionary for O(1) lookups
+    old_map = {item["company_name"]: item for item in old_data}
+    new_openings_found = False
+
+    for new_company in new_data:
+        name = new_company["company_name"]
+        new_titles = {role["title"] for role in new_company["matching_roles"]}
+        
+        # If the company was scraped in the previous run
+        if name in old_map:
+            old_titles = {role["title"] for role in old_map[name]["matching_roles"]}
+            # Mathematical set difference to find purely unique additions
+            added_roles = new_titles - old_titles
+            
+            if added_roles:
+                new_openings_found = True
+                print(f"\n NEW OPENINGS DETECTED AT {name.upper()}:")
+                for role in new_company["matching_roles"]:
+                    if role["title"] in added_roles:
+                        print(f"  * {role['title']} -> Apply: {new_company['company_url']}")
+        else:
+            # Entirely new company added to openroles.txt since last run
+            if new_titles:
+                new_openings_found = True
+                print(f"\n🆕 NEW COMPANY DETECTED: {name.upper()}:")
+                for role in new_company["matching_roles"]:
+                    print(f"  * {role['title']} -> Apply: {new_company['company_url']}")
 
 # Augment the LLM with tools
 tools = []
@@ -183,7 +223,25 @@ def main():
                     f.write(f"\t{j.title}\n")
                     f.write(f"\t\t{j.requirements}")
                     f.write("\n")
+            f.write(f"{i.company_url}\n")
             f.write("\n")
+    pickle_filename = "intern_results.pkl"
+    if os.path.exists(pickle_filename):
+        try:
+            with open(pickle_filename, "rb") as f:
+                historical_results = pickle.load(f)
+
+            # Perform comparative analysis block
+            compare_results(historical_results, final_results)
+        except Exception as e:
+            print(f"Failed to read historical pickle state: {e}")
+    else:
+        print("\nFirst execution tracked. Creating tracking state base layer...")
+
+    # 3. Serialize current results to pickle file for the next run
+    with open(pickle_filename, "wb") as f:
+        pickle.dump(final_results, f)
+    print(f"\nState saved securely to {pickle_filename}")
 
 
 # for chunk in agent.stream(messages, stream_mode="updates"):
