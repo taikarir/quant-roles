@@ -166,7 +166,7 @@ def main():
     companies = load_company_urls("quantlist.txt")
     final_results = []
     intern_results = []
-    for _,company in enumerate(companies[0:2]):
+    for _,company in enumerate(companies):
         print(f"[{_+1}/{len(companies)}] Processing {company['name']}...")
         raw_text = scrape_page_text(company["url"])
         try:
