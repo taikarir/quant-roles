@@ -120,38 +120,6 @@ def analyze_with_gemini(company_name: str, company_url: str, page_text: str) -> 
     )
     return updated_response
 
-def compare_results(old_data: List[dict], new_data: List[dict]):
-    """Compares new scraping results against pickled data to identify new jobs."""
-    print("\n=== DELTA ANALYSIS (NEW ROLES DETECTED) ===")
-    
-    # Map old data into a dictionary for O(1) lookups
-    old_map = {item["company_name"]: item for item in old_data}
-    new_openings_found = False
-
-    for new_company in new_data:
-        name = new_company["company_name"]
-        new_titles = {role["title"] for role in new_company["matching_roles"]}
-        
-        # If the company was scraped in the previous run
-        if name in old_map:
-            old_titles = {role["title"] for role in old_map[name]["matching_roles"]}
-            # Mathematical set difference to find purely unique additions
-            added_roles = new_titles - old_titles
-            
-            if added_roles:
-                new_openings_found = True
-                print(f"\n NEW OPENINGS DETECTED AT {name.upper()}:")
-                for role in new_company["matching_roles"]:
-                    if role["title"] in added_roles:
-                        print(f"  * {role['title']} -> Apply: {new_company['company_url']}")
-        else:
-            # Entirely new company added to openroles.txt since last run
-            if new_titles:
-                new_openings_found = True
-                print(f"\n🆕 NEW COMPANY DETECTED: {name.upper()}:")
-                for role in new_company["matching_roles"]:
-                    print(f"  * {role['title']} -> Apply: {new_company['company_url']}")
-
 # Augment the LLM with tools
 tools = []
 tools_by_name = {tool.name: tool for tool in tools}
@@ -194,13 +162,11 @@ def agent(messages: list[BaseMessage]):
     messages = add_messages(messages, model_response)
     return messages
 
-
 def main():
-    companies = load_company_urls("openroles.txt")
-    print(f"Found {len(companies)} companies: {''.join([i['name'] for i in companies])}")
+    companies = load_company_urls("quantlist.txt")
     final_results = []
     intern_results = []
-    for _,company in enumerate(companies):
+    for _,company in enumerate(companies[0:2]):
         print(f"[{_+1}/{len(companies)}] Processing {company['name']}...")
         raw_text = scrape_page_text(company["url"])
         try:
@@ -211,41 +177,15 @@ def main():
             print(response)
         except Exception as e:
             print(f" -> Failed parsing with Gemini: {e}")
-    with open("results.txt", "w") as f:
-        for i in final_results:
-            f.write(f"{i.company_name}: {str(i.has_quant_internships)}")
-            f.write("\n")
-    with open("intern_results.txt", "w") as f:
+    with open("README.md", "w") as f:
         for i in intern_results:
-            f.write(f"{i.company_name}\n")
+            f.write(f"`{i.company_name}`\n")
             if i.has_quant_internships:
                 for j in i.matching_roles:
-                    f.write(f"\t{j.title}\n")
-                    f.write(f"\t\t{j.requirements}")
+                    f.write(f"\t`{j.title}`\n")
+                    f.write(f"\t\t`{j.requirements}`")
                     f.write("\n")
-            f.write(f"{i.company_url}\n")
+            f.write(f"`{i.company_url}`\n")
             f.write("\n")
-    pickle_filename = "intern_results.pkl"
-    if os.path.exists(pickle_filename):
-        try:
-            with open(pickle_filename, "rb") as f:
-                historical_results = pickle.load(f)
-
-            # Perform comparative analysis block
-            compare_results(historical_results, final_results)
-        except Exception as e:
-            print(f"Failed to read historical pickle state: {e}")
-    else:
-        print("\nFirst execution tracked. Creating tracking state base layer...")
-
-    # 3. Serialize current results to pickle file for the next run
-    with open(pickle_filename, "wb") as f:
-        pickle.dump(final_results, f)
-    print(f"\nState saved securely to {pickle_filename}")
-
-
-# for chunk in agent.stream(messages, stream_mode="updates"):
-    # print(chunk)
-    # print("\n")
 
 main()
