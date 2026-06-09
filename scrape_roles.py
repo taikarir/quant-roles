@@ -179,13 +179,11 @@ def main():
             print(f" -> Failed parsing with Gemini: {e}")
     with open("README.md", "w") as f:
         for i in intern_results:
-            f.write(f"`{i.company_name}`\n")
+            f.write(f"### [{i.company_name}]({i.company_url})\n")
             if i.has_quant_internships:
                 for j in i.matching_roles:
-                    f.write(f"\t`{j.title}`\n")
-                    f.write(f"\t\t`{j.requirements}`")
-                    f.write("\n")
-            f.write(f"`{i.company_url}`\n")
+                    f.write(f"- **{j.title}**\n")
+                    f.write(f"  - **{j.requirements}**\n")
             f.write("\n")
 
 main()
