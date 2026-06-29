@@ -177,7 +177,11 @@ def main():
             print(response)
         except Exception as e:
             print(f" -> Failed parsing with Gemini: {e}")
+    with open("README-stem.md", "r") as f_stem:
+        stem_content = f_stem.read()
     with open("README.md", "w") as f:
+        f.write(stem_content)
+        f.write("\n\n")
         for i in intern_results:
             f.write(f"### [{i.company_name}]({i.company_url})\n")
             if i.has_quant_internships:
