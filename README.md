@@ -17,65 +17,49 @@ Tai Karir • [GitHub](https://github.com/taikarir) • [LinkedIn](https://www.l
 
 ### [AQR Capital Management](https://careers.aqr.com/jobs/category/university-jobs?size=n_20_n)
 - **2027 Research Summer Analyst**
-  - **University student level internship focused on quantitative research.**
+  - **University level role; research-focused quantitative profile.**
 - **2027 Portfolio Implementation, Trading and Portfolio Finance Summer Analyst**
-  - **University student level internship focused on trading and portfolio implementation.**
+  - **University level role; quantitative trading and implementation exposure.**
 
 ### [AXQ Capital](https://job-boards.greenhouse.io/axq)
 - **Quantitative Research Intern**
-  - **The role falls under the Quantitative Research department; typical requirements for such roles at AXQ Capital include advanced degrees in quantitative fields, proficiency in programming (e.g., Python/C++), and strong mathematical research capabilities.**
+  - **The role is listed under the Quantitative Research department; typical requirements involve strong mathematical and programming skills.**
 
 ### [Aquatic Capital Management](https://job-boards.greenhouse.io/aquaticcapitalmanagement)
 - **Quantitative Researcher, Intern (Summer 2027)**
-  - **Internship opportunity for undergraduate or graduate students; location in Chicago or London.**
+  - **Internship for Summer 2027 based in Chicago or London.**
 
 ### [Balyasny Asset Management](https://bambusdev.my.site.com/s/)
 - **Quantitative Researcher (Summer Internship)**
-  - **Strong quantitative and analytical skills, typically pursuing an advanced degree in a STEM field.**
+  - **Quantitative research focus, academic background in relevant field**
 - **Quantitative Researcher (Off Cycle Internship)**
-  - **Strong quantitative and analytical skills, typically pursuing an advanced degree in a STEM field.**
+  - **Quantitative research focus, academic background in relevant field**
 
 ### [Citadel](https://www.citadel.com/careers/open-opportunities?experience-filter=internships&location-filter=americas,chicago,greenwich,houston,miami,new-york&selected-job-sections=388,389,387,390&current_page=1&sort_order=DESC&per_page=10&action=careers_listing_filter)
 - **Quantitative Research Engineer – PhD Intern (US)**
-  - **PhD student, programming skills (Python/C++), research ability, data structures/algorithms and problem-solving.**
+  - **Strong programming skills in Python and C++, data structures, algorithms, and problem-solving.**
 - **Quantitative Researcher – PhD Intern (US)**
-  - **PhD student, programming skills (Python/C++), research ability, data structures/algorithms and problem-solving.**
+  - **Strong research ability, programming skills in Python and C++, data structures, algorithms, and problem-solving.**
 - **Machine Learning Researcher – PhD Intern (US)**
-  - **PhD student, strong research ability, machine learning expertise, programming skills, data structures/algorithms.**
-
-### [Citadel Securities](https://www.citadelsecurities.com/careers/open-opportunities?experience-filter=internships&selected-job-sections=323,325,324,326&current_page=1&sort_order=DESC&per_page=10&action=careers_listing_filter)
-- **Quantitative Researcher – PhD Intern (US)**
-  - **PhD level student; strong quantitative and research skills.**
-- **Quantitative Researcher – PhD Intern (Asia)**
-  - **PhD level student; strong quantitative and research skills.**
-- **Quantitative Researcher – PhD Intern (Europe)**
-  - **PhD level student; strong quantitative and research skills.**
-- **Quantitative Trading – Intern (Australia)**
-  - **Strong analytical and quantitative skills.**
-- **Quantitative Research – PhD Intern (Australia)**
-  - **PhD level student; strong quantitative and research skills.**
-- **Quantitative Research Engineer – PhD Intern (US)**
-  - **PhD level student; strong programming and research skills.**
-- **Quantitative Research Analyst Intern – BS/MS (Asia)**
-  - **BS/MS level student; strong analytical and quantitative skills.**
+  - **Strong research ability, programming skills in Python and C++, data structures, algorithms, and problem-solving.**
 
 ### [CME Group](https://cmegroup.wd1.myworkdayjobs.com/en-US/cme_careers?q=quant)
 - **Quant Risk Management Intern - Year Round**
   - **Internship focused on quantitative risk management, suitable for students.**
 
-### [Cubist / Point72](https://careers.point72.com/?business=cubist&experience=internships)
+### [Cubist (Point72)](https://careers.point72.com/?business=cubist&experience=internships)
 - **Quantitative Alpha Researcher Intern**
-  - **Focus on Systematic Investing; strong background in quantitative research and finance.**
+  - **Strong quantitative background for systematic investing research roles.**
 - **Quantitative Researcher - Intern**
-  - **Focus on Systematic Investing; quantitative modeling and research skills.**
+  - **Advanced degree in a quantitative field preferred; focus on systematic strategies.**
 - **Summer 2027 Quantitative Researcher Internship**
-  - **Focus on Systematic Investing; pursuit of an advanced degree in a quantitative field preferred.**
+  - **Targeting students for systematic investing quantitative research.**
 - **Summer 2027 Quantitative Developer Internship**
-  - **Focus on Systematic Investing; strong programming skills (C++, Python) and data structures.**
+  - **Proficiency in programming languages suitable for systematic trading technology.**
 - **Quantitative Software Developer Intern**
-  - **Focus on Systematic Investing; experience in software engineering and quantitative applications.**
+  - **Software engineering expertise applied to quantitative systematic trading systems.**
 - **Machine Learning Researcher - Intern**
-  - **Focus on Systematic Investing; advanced knowledge of machine learning, statistics, and programming.**
+  - **Background in machine learning and data analysis for quantitative research.**
 
 ### [The D. E. Shaw Group](https://www.deshaw.com/careers/internships)
 - **Quantitative Analyst Intern (New York) – Summer 2027**
@@ -83,103 +67,111 @@ Tai Karir • [GitHub](https://github.com/taikarir) • [LinkedIn](https://www.l
 - **Quantitative Analyst, Ph.D. Intern (New York) – Summer 2027**
   - **Ph.D. candidates with impressive records of academic and/or professional achievement.**
 - **Proprietary Trading Intern (New York) – Summer 2027**
-  - **Talented individuals with unique perspectives.**
+  - **Unique perspectives and impressive records of academic and/or professional achievement.**
 
 ### [GSA Capital Partners](https://www.gsacapital.com/join-us#jobs)
 - **Quantitative Researcher - Intern**
-  - **Penultimate year of graduate or postgraduate studies in a STEM, economics, or empirical finance discipline from a leading academic institution.**
+  - **Penultimate year of graduate or postgraduate studies in a STEM, economics or empirical finance discipline from a leading academic institution.**
 
 ### [JP Morgan](https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/jobs?keyword=summer&location=United+States&locationId=300000000289738&locationLevel=country&mode=location)
+- **2027 Markets Summer Analyst Program - Research**
+  - **Requires experience or interest in global markets, including Research, Sales, Trading, Structuring & Origination, or Digital Markets.**
 - **2026 Commodities Trading Internship Program**
-  - **Internship focused on trading, commodities market knowledge and analytical skills.**
+  - **Internship program focused on commodities trading activities.**
 
 ### [Jane Street](https://www.janestreet.com/join-jane-street/open-roles/?type=internship&location=all-locations)
 - **Quantitative Trader**
-  - **Internship based in Hong Kong; Trading, Research, and Machine Learning department.**
+  - **Trading, Research, and Machine Learning focus**
 - **Quantitative Researcher**
-  - **Internship based in Hong Kong; Trading, Research, and Machine Learning department.**
+  - **Trading, Research, and Machine Learning focus**
+- **Machine Learning Researcher**
+  - **Trading, Research, and Machine Learning focus**
 
 ### [Jump Trading](https://www.jumptrading.com/hr/students-new-grads)
 - **Campus Crypto Researcher (Intern)**
-  - **Internship role focused on crypto research, specific degree requirements not listed but typical for quant research roles.**
+  - **Intern role focusing on crypto research; strong academic background preferred.**
 - **Campus Trading Team Software Engineer (Intern)**
-  - **Internship role for software engineering within a trading team environment.**
+  - **Intern role focusing on trading systems and software development; strong programming skills required.**
 
 ### [Man Group](https://job-boards.eu.greenhouse.io/mangroup)
 - **Quantitative Research Intern – Specialist Equities**
-  - **Internship role in quantitative research; requires strong academic background in quantitative subjects.**
+  - **Quantitative research focus**
 - **Quantitative Developer, Intern**
-  - **Internship role in quantitative development; focus on software engineering and quantitative programming.**
+  - **Software development and quantitative analysis**
 - **Quant Research Analyst, Intern**
-  - **Internship role in quantitative research; requires analytical skills and data-driven mindset.**
+  - **Quantitative research and analysis**
 
 ### [Millennium](https://campusjobs.mlp.com/careers?domain=mlp.com&microsite=campus-site)
 - **Off-Cycle Trading Intern - Quantitative Researcher, 2026, Hong Kong**
-  - **Quantitative Research focused internship.**
+  - **Targeted towards Quantitative Researcher role in the Trading department.**
 - **Off-Cycle AI Intern (Trading), 2026, London**
-  - **AI and Trading/Engineering focused internship.**
+  - **Targeted towards AI/Trading intern role.**
 - **Off-Cycle AI Intern (Trading), 2026, Dubai**
-  - **AI and Trading/Engineering focused internship.**
+  - **Targeted towards AI/Trading intern role.**
 - **Off-Cycle Trading Intern - Quantitative Researcher, 2026, Shanghai**
-  - **Quantitative Research focused internship.**
+  - **Targeted towards Quantitative Researcher role in the Trading department.**
 
 ### [Optiver](https://optiver.com/working-at-optiver/career-opportunities/?numberposts=100&paged=1&search_target=title,excerpt&taxonomy_relation=AND&search_relation=AND&show_load_more=1&show_pagination=1&show_sort=0&orderby=date&order=DESC&layout_style=default&posts_per_page=10&show_levels=1&show_departments=1&show_offices=1&show_search=1&level=internship)
 - **Expressions of Interest - Quantitative Research Internship, PhD (Summer 2027 -Shanghai)**
   - **PhD student, Quantitative Research & Machine Learning focus.**
 
+### [Quadrature Capital](https://job-boards.greenhouse.io/quadraturecapital/jobs/4255974)
+- **Quant Developer internship**
+  - **Programming experience is a must.**
+
 ### [Radix Trading](https://job-boards.greenhouse.io/radixuniversity)
 - **Quantitative Technologist (C++ Intern)**
-  - **C++ development skills for research technology and trading systems.**
+  - **Proficiency in C++ for software development within a trading systems environment.**
 
 ### [Susquehanna International Group, LLP](https://careers.sig.com/jobs?categories=Interns%20%2B%20Co-ops&page=1&keywords=quant&sortBy=posted_date&descending=true)
 - **Quantitative Research Internship - PhD: Summer 2027**
-  - **PhD student**
+  - **PhD level candidates**
 - **Quantitative Systematic Trading Internship – Master's: Summer 2027**
-  - **Master's student**
+  - **Master's level candidates**
 - **Quantitative Research Internship – Master's: Summer 2027**
-  - **Master's student**
+  - **Master's level candidates**
 - **Quantitative Systematic Trading Internship - PhD: Summer 2027**
-  - **PhD student**
+  - **PhD level candidates**
 - **Quantitative Strategy Developer Internship: Summer 2027**
-  - **Software engineering focus**
+  - **Software Engineering/Quantitative skills**
 
 ### [TransMarket Group](https://www.transmarketgroup.com/careers)
 - **Quantitative Trader Intern**
-  - **Clear passion for markets, competitive nature, and willingness to learn. Focus on mathematical models and disciplined risk management.**
+  - **Passion for markets, competitive nature, willingness to learn, mathematical modeling ability.**
 
 ### [Trexquant Investment](https://trexquant.com/careers?q=intern)
 - **Quantitative Researcher Intern -Summer 2026 year (CHINA)**
-  - **Quantitative research and machine learning focus**
+  - **Quantitative Research and Machine Learning internship focusing on data-driven strategy development.**
 
 ### [Virtu Financial](https://job-boards.greenhouse.io/virtu)
 - **2027 Internship - Quant Research (Undergrad)**
-  - **Undergraduate level students interested in quantitative research.**
+  - **Undergraduate student status with interest in quantitative research.**
 
 ### [Walleye Capital](https://job-boards.greenhouse.io/walleyecapital-external-students)
 - **Central Equity Quant Research (CEQR) Intern (Summer 2027)**
-  - **Quantitative research focus in central equity**
+  - **Quantitative research focus in central equity strategy.**
 - **Equity Volatility Quant Researcher Intern (Summer 2027)**
-  - **Quantitative research focus in equity volatility**
+  - **Quantitative research in equity volatility.**
 - **Quantic - PhD Quantitative Researcher Intern (Summer 2027)**
-  - **PhD level quantitative research**
+  - **PhD level research focus.**
 - **Quantic – Quantitative Developer Intern (Summer 2027)**
-  - **Quantitative development**
+  - **Quantitative development skills.**
 - **Quantic - Quantitative Researcher Intern (Summer 2027)**
-  - **Quantitative research**
+  - **Quantitative research focus.**
 - **Volatility Trading Developer Intern (Summer 2027)**
-  - **Volatility trading focused quantitative development**
+  - **Development for volatility trading systems.**
 
 ### [Wintermute](https://www.wintermute.com/company/opportunities)
 - **DeFi Algorithmic Trading Internship**
-  - **Internship role in the DeFi team based in Singapore.**
+  - **Internship focused on algorithmic trading in DeFi; onsite in Singapore.**
 
 ### [WorldQuant](https://job-boards.greenhouse.io/worldquant)
 - **Quantitative Research Internship (Off-Cycle) 2026**
-  - **Internship role in the Research Division based in Paris.**
+  - **Research-focused internship, location: Paris.**
 - **Quantitative Research Intern**
-  - **Internship role in the Research Division based in Beijing or Shanghai.**
+  - **Research-focused internship, location: Beijing OR Shanghai.**
 - **Quantitative Research Intern (July/August to December 2026)**
-  - **Internship role in the Research Division based in Singapore.**
+  - **Research-focused internship, location: Singapore.**
 - **Quantitative Research Intern (LLMs & AI Agents)**
-  - **Internship role in the Research Division focusing on LLMs and AI Agents, based in Hanoi or Ho Chi Minh City.**
+  - **Specialized internship in LLMs and AI Agents, location: Hanoi or Ho Chi Minh City.**
 
